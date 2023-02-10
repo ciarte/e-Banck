@@ -7,35 +7,36 @@ export const User = sequelize.define("user", {
     defaultValue: DataTypes.UUIDV4,
     primaryKey: true,
   },
-  name: { 
+  name: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
-  lastName: { 
+  lastName: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   userName: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
     unique: true,
   },
-  email:{
+  email: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
     unique: true,
   },
   birthday: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   password: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   deleted: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: false,
   },
-},)
+});
+

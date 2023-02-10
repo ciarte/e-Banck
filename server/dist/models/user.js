@@ -14,29 +14,29 @@ exports.User = conection_1.default.define("user", {
     },
     name: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     lastName: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     userName: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
         unique: true,
     },
     email: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
         unique: true,
     },
     birthday: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     password: {
         type: sequelize_1.DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     deleted: {
         type: sequelize_1.DataTypes.BOOLEAN,
