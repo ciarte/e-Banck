@@ -32,8 +32,8 @@ class Server {
     }
     async dbConnect() {
         try {
-            await product_2.Product.sync();
-            await user_2.User.sync();
+            await product_2.Product.sync({ force: false });
+            await user_2.User.sync({ force: false });
             console.log("Connection has been established successfully.");
         }
         catch (error) {
