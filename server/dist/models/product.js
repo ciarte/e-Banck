@@ -13,19 +13,18 @@ exports.Product = conection_1.default.define("product", {
         primaryKey: true,
     },
     number: {
-        type: sequelize_1.DataTypes.INTEGER,
+        type: sequelize_1.DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [15, 15],
-            msg: "Cards must contain 15 digits",
+            len: [16, 16],
         },
     },
     code: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false,
         validate: {
-            max: 999,
-            min: 100
+            max: 9999,
+            min: 1000
         }
     },
     description: {
