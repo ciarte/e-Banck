@@ -8,7 +8,7 @@ const product_1 = __importDefault(require("../routes/product"));
 const user_1 = __importDefault(require("../routes/user"));
 const product_2 = require("./product");
 const user_2 = require("./user");
-// import cors from 'cors';
+const cors_1 = __importDefault(require("cors"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -29,6 +29,7 @@ class Server {
     }
     midleware() {
         this.app.use(express_1.default.json());
+        this.app.use((0, cors_1.default)());
     }
     async dbConnect() {
         try {

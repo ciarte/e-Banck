@@ -3,7 +3,7 @@ import routesProduct from "../routes/product";
 import routesUser from "../routes/user";
 import { Product } from "./product";
 import { User } from "./user";
-// import cors from 'cors';
+import cors from "cors";
 
 class Server {
   private app: express.Application;
@@ -28,6 +28,7 @@ class Server {
   }
   midleware() {
     this.app.use(express.json());
+    this.app.use(cors());
   }
   async dbConnect() {
     try {
